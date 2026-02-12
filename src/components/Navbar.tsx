@@ -31,13 +31,8 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button onClick={() => scrollTo("#home")} className="flex items-center gap-2.5">
-          {/* P logo icon */}
-          <div className="w-8 h-8 rounded-lg border border-primary/50 flex items-center justify-center bg-primary/10"
-            style={{ boxShadow: "0 0 12px hsl(271 76% 53% / 0.3)" }}>
-            <span className="text-sm font-bold neon-text-purple">P</span>
-          </div>
-          <span className="text-lg font-bold text-foreground tracking-wide">Prajwal MR</span>
+        <button onClick={() => scrollTo("#home")} className="text-xl font-bold neon-text-purple tracking-wide">
+          Prajwal MR
         </button>
 
         {/* Desktop links */}
