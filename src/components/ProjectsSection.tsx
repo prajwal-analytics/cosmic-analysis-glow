@@ -7,21 +7,21 @@ const projects = [
     subtitle:
       "Interactive Power BI dashboard enabling users to explore and compare 4,385+ LEGO sets using advanced DAX logic and dynamic filtering.",
     tags: ["Power BI", "Excel"],
-    image: "/images/lego.png",
+    image: "https://i.postimg.cc/59vmvN2q/IMG-20260121-WA0039(5).jpg",
   },
   {
     title: "Tata Data Visualization – Business Insights",
     subtitle:
       "Power BI project focused on cleaning retail data, building KPI dashboards, and delivering strategic sales insights for executive decision-making.",
     tags: ["Power BI", "Excel"],
-    image: "/images/tata.png",
+    image: "https://i.postimg.cc/PJ4p47cr/IMG-20260122-WA0034(2).jpg",
   },
   {
     title: "CSR Impact Analysis (HUL)",
     subtitle:
       "Corporate social responsibility impact measurement and sustainability reporting case study.",
     tags: ["PDF"],
-    image: "/images/csr.png",
+    image: "https://i.postimg.cc/mkR174mw/IMG-20260122-WA0039.jpg",
   },
 ];
 
