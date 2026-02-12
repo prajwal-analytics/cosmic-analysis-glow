@@ -3,21 +3,27 @@ import { GraduationCap } from "lucide-react";
 
 const education = [
   {
-    institution: "Jain University",
-    degree: "BCom (Accounting & Finance)",
-    year: "Graduation 2026",
+    institution: "Jain (Deemed-to-be University)",
+    degree: "Bachelor of Commerce (BCom), Accounting & Finance",
+    duration: "2023 – 2026",
+    details:
+      "Relevant Coursework: Financial Accounting, Corporate Accounting, Financial Management, Cost Accounting, Auditing, Direct Tax, International Financial Management, Business Analytics, Artificial Intelligence.",
   },
   {
-    institution: "ICSI",
-    degree: "Company Secretary — Executive Level",
-    year: "Expected 2028",
+    institution: "The Institute of Company Secretaries of India (ICSI)",
+    degree: "Company Secretary — Executive Level (Pursuing)",
+    duration: "Expected 2028",
+    details:
+      "Core Areas: Corporate Governance, Company Law, Capital Markets, Business Law, Financial Management.",
   },
 ];
 
 const EducationSection = () => {
   return (
-    <section className="relative py-24">
+    <section id="education" className="relative py-24">
       <div className="max-w-4xl mx-auto px-6">
+        
+        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,17 +52,29 @@ const EducationSection = () => {
               >
                 {/* Timeline dot */}
                 <div
-                  className="absolute left-4 top-1 w-5 h-5 rounded-full border-2 border-primary bg-background"
+                  className="absolute left-4 top-2 w-5 h-5 rounded-full border-2 border-primary bg-background"
                   style={{ boxShadow: "0 0 12px hsl(271 76% 53% / 0.5)" }}
                 />
 
                 <div className="glass-card p-6">
                   <div className="flex items-center gap-2 mb-2">
                     <GraduationCap className="w-5 h-5 text-primary" />
-                    <h3 className="font-semibold text-foreground">{edu.institution}</h3>
+                    <h3 className="font-semibold text-foreground">
+                      {edu.institution}
+                    </h3>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-1">{edu.degree}</p>
-                  <p className="text-xs text-primary">{edu.year}</p>
+
+                  <p className="text-sm text-muted-foreground mb-1">
+                    {edu.degree}
+                  </p>
+
+                  <p className="text-xs text-primary mb-3">
+                    {edu.duration}
+                  </p>
+
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {edu.details}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -68,3 +86,4 @@ const EducationSection = () => {
 };
 
 export default EducationSection;
+
