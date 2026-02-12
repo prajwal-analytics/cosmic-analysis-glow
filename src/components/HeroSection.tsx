@@ -10,21 +10,22 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
     >
-      {/* Halo effect */}
+      {/* Background Halo Effect */}
       <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-30 pointer-events-none"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-[450px] h-[450px] md:w-[550px] md:h-[550px] rounded-full opacity-30 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, hsl(271 76% 53% / 0.4) 0%, hsl(195 100% 50% / 0.15) 40%, transparent 70%)",
+            "radial-gradient(circle, hsl(271 76% 53% / 0.35) 0%, hsl(195 100% 50% / 0.15) 40%, transparent 70%)",
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
-        {/* Left */}
+      <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 gap-16 items-center">
+        
+        {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -32,18 +33,20 @@ const HeroSection = () => {
             Business Analytics Student Portfolio
           </span>
 
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-3 leading-tight">
-            Hi! I'm <span className="neon-text-purple">Prajwal MR</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight">
+            Hi! I'm{" "}
+            <span className="neon-text-purple">Prajwal MR</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Final-Year BCom (Accounting & Finance) Student | Aspiring Business Analyst
+          <p className="text-lg md:text-2xl text-muted-foreground mb-5">
+            Final-Year BCom (Accounting & Finance) Student <br className="hidden md:block" />
+            <span className="text-primary">Aspiring Business Analyst</span>
           </p>
 
-          <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg">
+          <p className="text-muted-foreground leading-relaxed mb-8 max-w-xl">
             I focus on business analytics and data-driven decision-making,
             building dashboards and analytical reports using Power BI, Excel,
-            SQL, and Python.
+            SQL, and Python to transform data into actionable insights.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -62,36 +65,37 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Right - Profile Image */}
+        {/* RIGHT PROFILE IMAGE */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex justify-center"
+          className="flex justify-center items-center"
         >
-          <div className="relative">
-            {/* Glowing ring */}
-            <div
-              className="absolute inset-0 rounded-full animate-glow-pulse"
+          <div className="relative flex items-center justify-center">
+            
+            {/* Outer Glow Ring */}
+            <div className="absolute w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full border border-primary/40 animate-glow-pulse"
               style={{
                 boxShadow:
                   "0 0 60px hsl(271 76% 53% / 0.4), 0 0 120px hsl(195 100% 50% / 0.2)",
               }}
             />
 
-            <div
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full border-2 border-primary/40 overflow-hidden"
+            {/* Profile Image Container */}
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/50"
               style={{
                 boxShadow:
-                  "0 0 40px hsl(271 76% 53% / 0.3), inset 0 0 40px hsl(271 76% 53% / 0.1)",
+                  "0 0 40px hsl(271 76% 53% / 0.35), inset 0 0 40px hsl(271 76% 53% / 0.15)",
               }}
             >
               <img
                 src="https://i.postimg.cc/4dRjv2pk/IMG-20260127-WA0034.jpg"
                 alt="Prajwal MR"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
+
           </div>
         </motion.div>
       </div>
@@ -100,4 +104,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
