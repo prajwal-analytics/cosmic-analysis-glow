@@ -2,18 +2,20 @@ import { motion } from "framer-motion";
 import { Award } from "lucide-react";
 
 const certifications = [
-  "Microsoft Power BI Data Analyst",
+  "Microsoft Power BI Data Analyst — EY",
   "Data Visualization — Tata (Forage)",
-  "Operations Job Simulation — Goldman Sachs",
-  "Operations Job Simulation (Forage)",
+  "Operations Job Simulation — Goldman Sachs (Forage)",
   "Business Analytics with AI",
   "Understanding UK Business Finance",
+  "Financial Statement Analysis",
 ];
 
 const CertificationsSection = () => {
   return (
-    <section className="relative py-24">
+    <section id="certifications" className="relative py-24">
       <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +28,8 @@ const CertificationsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* Certifications Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, i) => (
             <motion.div
               key={cert}
@@ -34,10 +37,12 @@ const CertificationsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="glass-card p-5 flex items-center gap-4 neon-border-purple"
+              className="glass-card p-5 flex items-center gap-4 neon-border-purple hover:shadow-[0_0_20px_rgba(138,43,226,0.4)] transition-all duration-300"
             >
               <Award className="w-6 h-6 text-primary shrink-0" />
-              <span className="text-sm font-medium text-foreground">{cert}</span>
+              <span className="text-sm font-medium text-foreground">
+                {cert}
+              </span>
             </motion.div>
           ))}
         </div>
@@ -47,3 +52,4 @@ const CertificationsSection = () => {
 };
 
 export default CertificationsSection;
+
