@@ -28,28 +28,40 @@ const AboutSection = () => {
           className="glass-card p-8 md:p-10"
         >
           <p className="text-muted-foreground leading-relaxed mb-6">
-            I'm Prajwal MR, a final-year <strong className="text-foreground">BCom (Accounting & Finance)</strong> student based in 
-            <strong className="text-foreground"> Bangalore, India</strong>. I focus on business analytics, financial analysis, 
-            and data-driven decision-making using tools like Power BI, Excel, SQL, and Python.
+            I'm Prajwal MR, a final-year{" "}
+            <strong className="text-foreground">
+              BCom (Accounting & Finance)
+            </strong>{" "}
+            student based in{" "}
+            <strong className="text-foreground">
+              Bangalore, India
+            </strong>. 
+            My focus lies in business analytics, financial analysis, and data-driven 
+            decision-making using tools such as Power BI, Excel, SQL, and Python.
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Alongside my degree, I am pursuing the <strong className="text-foreground">CS (Company Secretary) Executive Level</strong> 
-            from ICSI, strengthening my understanding of corporate governance, regulatory frameworks, and financial management. 
-            I aim to integrate analytical thinking with business strategy to deliver impactful insights.
+            Alongside my degree, I am pursuing the{" "}
+            <strong className="text-foreground">
+              CS (Company Secretary) – Executive Level
+            </strong>{" "}
+            from ICSI. This strengthens my expertise in corporate governance, 
+            regulatory compliance, and financial management. 
+            I aim to combine analytical thinking with strategic business insight 
+            to deliver impactful and actionable solutions.
           </p>
 
           {/* Info Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
             {[
               { icon: MapPin, label: "Bangalore, India" },
-              { icon: GraduationCap, label: "BCom (Accounting & Finance)" },
-              { icon: BookOpen, label: "CS Executive (ICSI)" },
-              { icon: Languages, label: "English, Kannada, German (Basic)" },
+              { icon: GraduationCap, label: "BCom (A&F) – 2023–2026" },
+              { icon: BookOpen, label: "CS Executive (Pursuing)" },
+              { icon: Languages, label: "English | Kannada | German (Basic)" },
             ].map((item) => (
               <div
                 key={item.label}
-                className="flex items-center gap-2 text-sm text-muted-foreground"
+                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 <item.icon className="w-4 h-4 text-primary" />
                 <span>{item.label}</span>
@@ -64,4 +76,5 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
 
