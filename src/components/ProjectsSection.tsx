@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, BarChart3, PieChart, FileText } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -7,21 +7,21 @@ const projects = [
     subtitle:
       "Interactive Power BI dashboard enabling users to explore and compare 4,385+ LEGO sets using advanced DAX logic and dynamic filtering.",
     tags: ["Power BI", "Excel"],
-    icon: BarChart3,
+    image: "/images/lego.png",
   },
   {
     title: "Tata Data Visualization – Business Insights",
     subtitle:
       "Power BI project focused on cleaning retail data, building KPI dashboards, and delivering strategic sales insights for executive decision-making.",
     tags: ["Power BI", "Excel"],
-    icon: PieChart,
+    image: "/images/tata.png",
   },
   {
     title: "CSR Impact Analysis (HUL)",
     subtitle:
       "Corporate social responsibility impact measurement and sustainability reporting case study.",
     tags: ["PDF"],
-    icon: FileText,
+    image: "/images/csr.png",
   },
 ];
 
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
     <section id="projects" className="relative py-24">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Section Heading */}
+        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,9 +57,14 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="glass-card p-6 flex flex-col hover:shadow-[0_0_25px_rgba(138,43,226,0.4)] transition-all duration-300"
             >
-              {/* Dashboard Preview Placeholder */}
-              <div className="w-full h-40 rounded-xl bg-muted/30 mb-5 flex items-center justify-center border border-border/30 overflow-hidden">
-                <project.icon className="w-16 h-16 text-primary/40" />
+
+              {/* Thumbnail */}
+              <div className="w-full h-40 rounded-xl mb-5 overflow-hidden border border-border/30">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
 
               {/* Title */}
@@ -97,6 +102,7 @@ const ProjectsSection = () => {
                 <ExternalLink className="w-3.5 h-3.5" />
                 View Project
               </button>
+
             </motion.div>
           ))}
         </div>
