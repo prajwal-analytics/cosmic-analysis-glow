@@ -8,7 +8,7 @@ const projects = [
       "Interactive Power BI dashboard enabling users to explore and compare 4,385+ LEGO sets using advanced DAX logic and dynamic filtering.",
     tags: ["Power BI", "Excel"],
     image: "https://i.postimg.cc/59vmvN2q/IMG-20260121-WA0039(5).jpg",
-    link: "https://github.com/prajwal-analytics/portfolio-project-files", // <-- put real link later
+    link: "https://github.com/prajwal-analytics/lego-set-explorer-dashboard",
   },
   {
     title: "Tata Data Visualization – Business Insights",
@@ -16,7 +16,7 @@ const projects = [
       "Power BI project focused on cleaning retail data, building KPI dashboards, and delivering strategic sales insights for executive decision-making.",
     tags: ["Power BI", "Excel"],
     image: "https://i.postimg.cc/PJ4p47cr/IMG-20260122-WA0034(2).jpg",
-    link: "https://github.com/prajwal-analytics/portfolio-project-files", // <-- put real link later
+    link: "https://github.com/prajwal-analytics/TATA-data-visualization-dashboard",
   },
   {
     title: "AdventureWorks Sales Dashboard",
@@ -32,7 +32,7 @@ const projects = [
       "Corporate social responsibility impact measurement and sustainability reporting case study.",
     tags: ["PDF"],
     image: "https://i.postimg.cc/mkR174mw/IMG-20260122-WA0039.jpg",
-    link: "https://github.com/prajwal-analytics/portfolio-project-files", // <-- put real PDF link later
+    link: "https://correct-maroon-xnnlpychb9.edgeone.app/",
   },
 ];
 
