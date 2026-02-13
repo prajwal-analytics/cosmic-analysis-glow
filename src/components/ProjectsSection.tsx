@@ -21,7 +21,7 @@ const projects = [
     subtitle:
       "Interactive Power BI dashboard analyzing revenue, profit, orders, and return trends using advanced DAX and KPI tracking to drive data-driven business insights.",
     tags: ["Power BI", "Excel"],
-    image: "https://i.postimg.cc/rFmVYBG2/IMG-20260213-WA0003.jpg",
+    image: "https://i.postimg.cc/Px3cLRCK/IMG-20260213-WA0005.jpg",
   },
   {
     title: "CSR Impact Analysis (HUL)",
