@@ -16,6 +16,13 @@ const projects = [
     tags: ["Power BI", "Excel"],
     image: "https://i.postimg.cc/PJ4p47cr/IMG-20260122-WA0034(2).jpg",
   },
+   {
+    title: "AdventureWorks Sales Dashboard",
+    subtitle:
+      "Interactive Power BI dashboard analyzing revenue, profit, orders, and return trends using advanced DAX and KPI tracking to drive data-driven business insights.",
+    tags: ["Power BI", "Excel"],
+    image: "https://i.postimg.cc/7hHcbyPb/IMG-20260213-WA0001.jpg",
+  },
   {
     title: "CSR Impact Analysis (HUL)",
     subtitle:
