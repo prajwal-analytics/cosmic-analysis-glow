@@ -8,6 +8,7 @@ const projects = [
       "Interactive Power BI dashboard enabling users to explore and compare 4,385+ LEGO sets using advanced DAX logic and dynamic filtering.",
     tags: ["Power BI", "Excel"],
     image: "https://i.postimg.cc/59vmvN2q/IMG-20260121-WA0039(5).jpg",
+    link: "https://github.com/prajwal-analytics/portfolio-project-files", // <-- put real link later
   },
   {
     title: "Tata Data Visualization – Business Insights",
@@ -15,13 +16,15 @@ const projects = [
       "Power BI project focused on cleaning retail data, building KPI dashboards, and delivering strategic sales insights for executive decision-making.",
     tags: ["Power BI", "Excel"],
     image: "https://i.postimg.cc/PJ4p47cr/IMG-20260122-WA0034(2).jpg",
+    link: "https://github.com/prajwal-analytics/portfolio-project-files", // <-- put real link later
   },
-   {
+  {
     title: "AdventureWorks Sales Dashboard",
     subtitle:
       "Interactive Power BI dashboard analyzing revenue, profit, orders, and return trends using advanced DAX and KPI tracking to drive data-driven business insights.",
     tags: ["Power BI", "Excel"],
     image: "https://i.postimg.cc/Px3cLRCK/IMG-20260213-WA0005.jpg",
+    comingSoon: true,
   },
   {
     title: "CSR Impact Analysis (HUL)",
@@ -29,6 +32,7 @@ const projects = [
       "Corporate social responsibility impact measurement and sustainability reporting case study.",
     tags: ["PDF"],
     image: "https://i.postimg.cc/mkR174mw/IMG-20260122-WA0039.jpg",
+    link: "https://github.com/prajwal-analytics/portfolio-project-files", // <-- put real PDF link later
   },
 ];
 
@@ -37,7 +41,6 @@ const ProjectsSection = () => {
     <section id="projects" className="relative py-24">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +56,6 @@ const ProjectsSection = () => {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, i) => (
             <motion.div
@@ -65,7 +67,6 @@ const ProjectsSection = () => {
               className="glass-card p-6 flex flex-col hover:shadow-[0_0_25px_rgba(138,43,226,0.4)] transition-all duration-300"
             >
 
-              {/* Thumbnail */}
               <div className="w-full h-40 rounded-xl mb-5 overflow-hidden border border-border/30">
                 <img
                   src={project.image}
@@ -74,17 +75,14 @@ const ProjectsSection = () => {
                 />
               </div>
 
-              {/* Title */}
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {project.title}
               </h3>
 
-              {/* Subtitle */}
               <p className="text-sm text-muted-foreground mb-4 flex-1">
                 {project.subtitle}
               </p>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-5">
                 {project.tags.map((tag) => (
                   <span
@@ -104,11 +102,24 @@ const ProjectsSection = () => {
                 ))}
               </div>
 
-              {/* Button */}
-              <button className="neon-btn text-sm py-2 flex items-center justify-center gap-2 w-full">
-                <ExternalLink className="w-3.5 h-3.5" />
-                View Project
-              </button>
+              {project.comingSoon ? (
+                <button
+                  disabled
+                  className="text-sm py-2 w-full bg-gray-700 text-gray-300 rounded-lg cursor-not-allowed"
+                >
+                  Coming Soon
+                </button>
+              ) : (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="neon-btn text-sm py-2 flex items-center justify-center gap-2 w-full"
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  View Project
+                </a>
+              )}
 
             </motion.div>
           ))}
@@ -119,4 +130,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-
